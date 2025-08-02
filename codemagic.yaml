@@ -3,12 +3,13 @@ workflows:
     name: Android Build Workflow
     environment:
       android:
-        build_tools: 33.0.0
+        build_tools: "33.0.0"
         compile_sdk: 33
-      java: openjdk11
+      java: "11"
     scripts:
       - ./gradlew clean
       - ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
+      - build/app/outputs/flutter-apk/app-debug.apk
+
 
