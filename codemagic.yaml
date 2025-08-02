@@ -1,0 +1,14 @@
+workflows:
+  android-build:
+    name: Android Build Workflow
+    environment:
+      android:
+        build_tools: 33.0.0
+        compile_sdk: 33
+        ndk: 21.4.7075529
+      java: openjdk11
+    scripts:
+      - ./gradlew clean
+      - ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
