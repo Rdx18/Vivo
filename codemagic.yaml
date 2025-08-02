@@ -1,11 +1,6 @@
 workflows:
   android-build:
     name: Android Build Workflow
-    environment:
-      android:
-        build_tools: "33.0.0"
-        compile_sdk: 33
-      java: "11"
     scripts:
       - ./gradlew clean
       - ./gradlew assembleDebug
